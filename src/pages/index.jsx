@@ -1,6 +1,7 @@
 import AnimatedText from '@/components/Animated/AnimatedText'
 import HireMe from '@/components/HireMe'
-import { LinkArrow } from '@/components/Icons'
+import { Download, LinkArrow } from '@/components/Icons'
+import { Preview } from '@/components/Preview'
 import Layout from '@/Layout'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -14,9 +15,9 @@ export default function Home() {
 			</Head>
 			<main className='flex items-center text-dark w-full dark:text-light 2xl'>
 				<Layout className='pt-0 md:pt-16 sm:pt-8'>
-					<div className='flex items-center justify-between w-full mt-16 lg:flex-col'>
-						<div className='w-1/2 md:w-full'>
-							{/* <Image src={avatar} alt='pruffit' className='w-full h-auto pointer-events-none'/> */}
+					<div className='flex items-center justify-between w-full mt-16 lg:flex-col lg:mt-0'>
+						<div className='w-1/2 md:w-full md:mb-4'>
+							<Preview className='w-[600px] h-auto 2xl:w-[500px] xl:w-[450px] lg:w-[400px] md:w-full' />
 						</div>
 						<div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
 							<AnimatedText
@@ -31,12 +32,12 @@ export default function Home() {
 							</p>
 							<div className='flex items-center self-start mt-2 lg:self-center'>
 								<Link
-									href='/dummy.pdf'
+									href='/CV.pdf'
 									target='_blank'
 									className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark mr-2 transition-colors ease dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light md:p-2 md:px-4 md:text-base'
 									download='true'
 								>
-									Resume <LinkArrow className='w-6 ml-1' />
+									Resume <Download className='w-6 ml-1' />
 								</Link>
 								<Link
 									href='mailto:kotlaevdanil@gmail.com'
